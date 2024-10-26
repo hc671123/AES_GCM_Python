@@ -21,6 +21,6 @@ When you report a vulnerability, please provide as detailed as possible followin
 - What impact does the vulnerability have (minor, medium, big)
 - Who is affected by the vulnerability
 
-Please report the vulnerability as security advisori, I'll respond asap.
+Please report the vulnerability as security advisory or as Issue if it is has a minor impact and doesn't need immediate attention, I'll respond asap.
 
 
