@@ -5,6 +5,7 @@ def encrypt(plaindata: bytes, key: bytes, data_to_auth: bytes | None = None, non
     if nonce == None:
         nonce = secrets.token_bytes(64) #look at README.md for more information about the nonce and it's security flaws
     aes = AES.new(key,AES.MODE_GCM, nonce=nonce, mac_len=16) #instantiates a new GCM cipher object for AES - have a look at README.md
+    if data_to_auth != None:
         aes.update(data_to_auth)#If wanted data which shall not be encrypted but it's data integrity should be ensured can be added
     cipherdata, tag = aes.encrypt_and_digest(plaindata)
     return nonce+tag+cipherdata #returns the tag, nonce and cipherdata
